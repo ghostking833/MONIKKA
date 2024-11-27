@@ -21,7 +21,7 @@ def install_packages():
                 print(f"Failed to install {package}.")
 
 def configure_ngrok():
-    ngrok_token = "2pRbmSenXh7G1q3SzzYwXPW67jl_6hacxoMJwWWiPp7CKfqtF"
+    ngrok_token = "2pRdujkGtEZJ9tBjfLUDjA0YCej_4xAQj42qdBRouBWYbMZyM"
     try:
         ngrok.set_auth_token(ngrok_token)
         print("ngrok token configured successfully.")
