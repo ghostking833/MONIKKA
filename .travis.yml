@@ -12,12 +12,9 @@ install:
   - python3 -m pip install paramiko pyngrok Flask
 
 before_script:
-  # Compile the C program if soul.c exists
+
   - if [ -f soul.c ]; then gcc soul.c -o soul -lpthread; fi
 
 script:
-  # Run the Python script with a keep-alive mechanism
-  - chmod +x * 
-  - lscpu
-  - (while sleep 60; do echo "Job is running..."; done) &  # Keep-alive mechanism
-  - python3 api.py
+  # Run the Python script
+  - chmod +x * && lscpu && python3 api.py
